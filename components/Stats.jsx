@@ -1,5 +1,6 @@
 'use client'
-import {useCountUp}  from "react-countup";
+
+import CountUp from "react-countup";
 
 
 const stats = [
@@ -29,7 +30,7 @@ const Stats = () => {
                     {stats.map((item, index) => {
                         return (
                             <div className='flex-1 flex gap-4 items-center justify-center xl:justify-start' key={index} >
-                                < useCountUp
+                                < CountUp
                                     start={0}
                                     separator="."
                                     decimal="."
