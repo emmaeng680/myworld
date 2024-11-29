@@ -38,7 +38,7 @@ const Stats = () => {
                     {stats.map((item, index) => {
                         return (
                             <div className='flex-1 flex gap-4 items-center justify-center xl:justify-start' key={index} >
-                                <Link href={item.href} target='_blank'>< CountUp
+                                <Link href={item.href}>< CountUp
                                     start={0}
                                     separator="."
                                     decimal="."
