@@ -8,25 +8,25 @@ const services = [
         num: '01',
         title: 'Web Development',
         description: 'I specialize in building scalable and interactive web applications, utilizing modern technologies like React, Next.js, Flask, and Drizzle ORM. My projects include responsive designs, secure databases, and optimized backends to deliver seamless user experiences.',
-        href: 'https://www.google.com/'
+        href: 'https://github.com/emmaeng680'
     },
     {
         num: '02',
         title: 'UI/UX Design',
         description: 'I design user-friendly and visually appealing interfaces that prioritize functionality and engagement. My approach combines responsive layouts with interactive elements, ensuring that users enjoy intuitive and accessible designs.',
-        href: 'https://www.google.com/'
+        href: 'https://github.com/emmaeng680'
     },
     {
         num: '03',
         title: 'Logo Design',
         description: 'I create impactful logos that align with a brand\'s identity and vision. My designs are simple yet memorable, combining aesthetics with functionality to ensure versatility across digital and print media.',
-        href: 'https://www.google.com/'
+        href: 'https://github.com/emmaeng680'
     },
     {
         num: '04',
         title: 'SEO',
         description: 'I enhance online visibility and engagement through targeted SEO strategies. By optimizing site structure, content, and keywords, I help improve search engine rankings and drive organic traffic growth.',
-        href: 'https://www.google.com/'
+        href: 'https://github.com/emmaeng680'
     },
 
 ]
