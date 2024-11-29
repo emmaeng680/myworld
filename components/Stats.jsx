@@ -1,24 +1,32 @@
 'use client'
 
 import CountUp from "react-countup";
+import {FaGithub} from "react-icons/fa";
+import Link from "next/link";
+
 
 
 const stats = [
     {
         num: 3,
-        text: "Years of experience"
+        text: "Years of experience",
+        href: ''
     },
     {
         num: 15,
-        text: "Projects completed"
+        text: "Projects completed",
+        href: ''
+
     },
     {
         num: 8,
-        text: "Technologies mastered"
+        text: "Technologies mastered",
+        href: 'https://myworld-git-main-emmanuel-oppongs-projects.vercel.app/resume'
     },
     {
         num: 650,
-        text: "Code commits"
+        text: "Code commits",
+        href: 'https://github.com/emmaeng680'
     },
 ]
 
@@ -39,7 +47,7 @@ const Stats = () => {
 
 
                                 <p className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]" } leading-snug text-white/80`}>
-                                    {item.text}
+                                    <Link href={item.href}>{item.text}</Link>
                                 </p>
                             </div>
                         )
@@ -51,3 +59,8 @@ const Stats = () => {
 };
 
 export default Stats;
+
+// {
+//     icon: <FaGithub/>,
+//         path: 'https://github.com/emmaeng680'
+// },
