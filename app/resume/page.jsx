@@ -1,7 +1,11 @@
 'use client'
 
-import { FaHtml5, FaCss3,FaJs,FaReact,FaFigma,FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { FaJava,FaGitAlt,FaJs,FaReact,FaNodeJs,FaPython } from "react-icons/fa";
+import { TbBrandCpp, TbBrandFirebase } from "react-icons/tb";
+import { DiNodejs } from "react-icons/di";
+
+import {  SiMongodb, SiNextdotjs, SiFastapi } from "react-icons/si";
+import { DiRedis } from "react-icons/di";
 
 //about data
 
@@ -40,7 +44,7 @@ const about = {
     },
     {
         fieldName: "Languages",
-        fieldValue: "English Spanish",
+        fieldValue: "English, Spanish",
     },
 ]
 }
@@ -125,12 +129,13 @@ const skills = {
     description: "kkkkasjsksksk(update this)",
     skillList: [
         {
-            icon: <FaHtml5/>,
-            name: "html 5",
+            icon: <TbBrandFirebase />,
+            name: "firebase",
         },
+
         {
-            icon: <FaCss3/>,
-            name: "css 3",
+            icon: <DiNodejs />,
+            name: "node.js",
         },
         {
             icon: <FaJs/>,
@@ -145,16 +150,33 @@ const skills = {
             name: "next.js",
         },
         {
-            icon: < SiTailwindcss />,
-            name: "tailwind.css",
+            icon: <FaGitAlt />,
+            name: "git",
         },
         {
-            icon: <FaNodeJs/>,
-            name: "node.js",
+            icon: <SiFastapi/>,
+            name: "fastapi",
+        },
+
+        {
+            icon: <FaJava />,
+            name: "java",
         },
         {
-            icon: <FaFigma/>,
-            name: "figma",
+            icon: <FaPython/>,
+            name: "python",
+        },
+        {
+            icon: <TbBrandCpp/>,
+            name: "c++",
+        },
+        {
+            icon: <SiMongodb />,
+            name: "mongodb",
+        },
+        {
+            icon: <DiRedis />,
+            name: "redis",
         },
     ]
 }
@@ -247,20 +269,19 @@ const Resume = () => {
                                     <h3 className='text-4xl font-bold'>{skills.title}</h3>
                                     <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{skills.description}</p>
                                 </div>
-                                <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]'>
+                                <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
                                     {skills.skillList.map((skill,index) => {
                                         return (
                                             <li key={index}>
-
                                                 <TooltipProvider delayDuration={100}>
                                                     <Tooltip>
-                                                        <TooltipTrigger>
+                                                        <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group'>
                                                             <div className='text-6xl group-hover:text-accent transition-all duration-600'>
                                                                 {skill.icon}
                                                             </div>
                                                         </TooltipTrigger>
                                                         <TooltipContent>
-                                                            <p>{skill.name}</p>
+                                                            <p className='capitalize'>{skill.name}</p>
                                                         </TooltipContent>
                                                     </Tooltip>
                                                 </TooltipProvider>
@@ -273,8 +294,23 @@ const Resume = () => {
 
 
                         {/* about */}
-                        <TabsContent value='about' className='w-full'>
-                            about
+                        <TabsContent value='about' className='w-full text-center xl:text-left'>
+                            <div className='flex flex-col gap-[30px]'>
+                                <h3 className='text-4xl font-bold '>{about.title}</h3>
+                                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0 '>
+                                    {about.description}
+                                </p>
+                                <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0 '>
+                                    {about.info.map((item,index) => {
+                                        return (
+                                            <li key={index} className='flex items-center justify-center xl:justify-start gap-4'>
+                                                <span className='text-white/60 '>{item.fieldName}</span>
+                                                <span className='text-xl'>{item.fieldValue}</span>
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
                         </TabsContent>
                     </div>
                 </Tabs>
